@@ -28,15 +28,31 @@ Animal shelters write short personality profiles for rescued pets. This project 
 - **Item-Based Collaborative Filtering:** estimate compatibility from similarities between item rating vectors.
 - **Hybrid Matcher:** combine normalized NLP similarity and item-based CF score: `0.65 * NLP + 0.35 * CF`. For cold-start pets, NLP remains available even when collaborative ratings do not exist.
 
-## 5. Installation
-Python 3.9+ is recommended.
 
-```bash
+## 5. Installation
+
+Python 3.9 or higher is recommended.
+
+### Step 1: Create virtual environment
+
+```powershell
 python -m venv venv
-# Windows PowerShell
+```
+
+### Step 2: Activate virtual environment
+
+Windows PowerShell:
+
+```powershell
 .\venv\Scripts\Activate.ps1
+```
+
+### Step 3: Install dependencies
+
+```powershell
 pip install -r requirements.txt
 ```
+
 
 ## 6. Run Commands
 Run commands from the project root:
@@ -90,3 +106,65 @@ The combination of profile text and compatibility ratings provides both content-
 
 ## 11. Academic Integrity
 The dataset in this repository is synthetic and the implementation is written for this assigned scenario. Be prepared to explain text preprocessing, TF-IDF, cosine similarity, item-based collaborative filtering, the hybrid formula, evaluation split, and limitations during the project demonstration.
+
+## 12. Sample Outputs
+
+### Test Case 1 - Adopter Query
+
+Query: "quiet apartment, first time owner, looking for calm affectionate cat"
+
+Top 5 recommended pets:
+
+| Item ID | Pet Name | Species | Similarity |
+|---|---|---|---:|
+| P001 | Milo | Cat | 0.395360 |
+| P022 | Freya | Cat | 0.271943 |
+| P033 | Pearl | Cat | 0.258054 |
+| P004 | Coco | Cat | 0.155587 |
+| P016 | Willow | Cat | 0.148963 |
+
+### Test Case 1B - Hybrid Matcher
+
+| Item ID | Pet Name | Species | Hybrid Score |
+|---|---|---|---:|
+| P006 | Daisy | Dog | 0.376979 |
+| P005 | Rocky | Dog | 0.369773 |
+| P031 | Marble | Rabbit | 0.369273 |
+| P018 | Poppy | Guinea Pig | 0.365795 |
+| P035 | Rosie | Dog | 0.364592 |
+
+### Test Case 2 - Similar Pet Profiles
+
+Selected pet: P001 - Milo
+
+| Item ID | Pet Name | Similarity |
+|---|---|---:|
+| P033 | Pearl | 0.212772 |
+| P012 | Cleo | 0.145464 |
+| P016 | Willow | 0.115565 |
+| P002 | Luna | 0.110166 |
+| P004 | Coco | 0.106915 |
+
+### Test Case 3 - Cold Start
+
+New pet: P041 - New Rescue Maple
+
+- Species: Cat
+- Historical ratings: 0
+- NLP similarity: 0.510784
+
+The system successfully recommends a newly rescued pet without historical ratings using NLP content-based matching.
+
+## 13. Evaluation Charts
+
+### 13.1 Rating Distribution
+
+The following chart shows the distribution of pet fit ratings in the dataset.
+
+![Rating Distribution](results/rating_distribution.png)
+
+### 13.2 Precision@5 Comparison
+
+This chart compares the recommendation performance of the three methods.
+
+![Precision@5 Comparison](results/precision_at_5_comparison.png)
