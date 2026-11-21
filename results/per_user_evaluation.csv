@@ -1,0 +1,46 @@
+user_id,method,precision_at_5
+U001,Popularity,0.2
+U001,NLP Content-Based,0.6
+U001,Hybrid,0.6
+U002,Popularity,0.0
+U002,NLP Content-Based,0.0
+U002,Hybrid,0.0
+U003,Popularity,0.2
+U003,NLP Content-Based,0.6
+U003,Hybrid,0.6
+U004,Popularity,0.0
+U004,NLP Content-Based,0.2
+U004,Hybrid,0.0
+U005,Popularity,0.0
+U005,NLP Content-Based,0.2
+U005,Hybrid,0.2
+U006,Popularity,0.0
+U006,NLP Content-Based,0.6
+U006,Hybrid,0.6
+U007,Popularity,0.2
+U007,NLP Content-Based,0.4
+U007,Hybrid,0.4
+U008,Popularity,0.2
+U008,NLP Content-Based,0.6
+U008,Hybrid,0.6
+U009,Popularity,0.2
+U009,NLP Content-Based,0.4
+U009,Hybrid,0.4
+U010,Popularity,0.0
+U010,NLP Content-Based,0.2
+U010,Hybrid,0.2
+U011,Popularity,0.0
+U011,NLP Content-Based,0.0
+U011,Hybrid,0.0
+U012,Popularity,0.0
+U012,NLP Content-Based,0.2
+U012,Hybrid,0.2
+U013,Popularity,0.2
+U013,NLP Content-Based,0.4
+U013,Hybrid,0.4
+U014,Popularity,0.2
+U014,NLP Content-Based,0.2
+U014,Hybrid,0.2
+U015,Popularity,0.2
+U015,NLP Content-Based,0.6
+U015,Hybrid,0.6

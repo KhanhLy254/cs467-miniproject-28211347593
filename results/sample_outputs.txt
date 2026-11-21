@@ -1,0 +1,40 @@
+
+==============================================================================
+TEST CASE 1 - ADOPTER QUERY (Top 5)
+==============================================================================
+item_id pet_name species  Similarity                                                                            keywords
+   P001     Milo     Cat    0.395360                 calm affectionate, enjoys quiet, person calm, milo calm, cat enjoys
+   P022    Freya     Cat    0.271943       calm time, thrive calm, owner playful, gentle affectionate, affectionate calm
+   P033    Pearl     Cat    0.258054 calm affectionate, pearl calm, living calm, affectionate gentle, affectionate likes
+   P004     Coco     Cat    0.155587                                 senior cat, cat likes, cat, calm quiet, senior calm
+   P016   Willow     Cat    0.148963   time soft, peaceful apartment, cuddly affectionate, apartment lifestyle, lap time
+
+==============================================================================
+TEST CASE 1B - HYBRID MATCHER (Top 5)
+==============================================================================
+item_id pet_name    species    score  nlp_score  cf_score                                                                         keywords
+   P006    Daisy        Dog 0.376979   0.089910  0.910106 affectionate patient, family time, time adapts, daisy affectionate, affectionate
+   P005    Rocky        Dog 0.369773   0.055266  0.953858                                              owner athletic, active owner, owner
+   P031   Marble     Rabbit 0.369273   0.035633  0.988888               calm environment, handling calm, patient quiet, quiet indoor, calm
+   P018    Poppy Guinea Pig 0.365795   0.043932  0.963542               sweet quiet, quiet gentle, quiet enjoys, calm company, enjoys calm
+   P035    Rosie        Dog 0.364592   0.044892  0.958320                                               time children, spending time, time
+
+==============================================================================
+TEST CASE 2 - SIMILAR PET PROFILES TO P001
+==============================================================================
+item_id pet_name species  Similarity                                                                                   keywords
+   P033    Pearl     Cat    0.212772        calm affectionate, pearl calm, living calm, affectionate gentle, affectionate likes
+   P012     Cleo     Cat    0.145464    affectionate quiet, gentle adults, cleo affectionate, stable gentle, spots affectionate
+   P016   Willow     Cat    0.115565 gentle cuddly, cuddly enjoys, peaceful apartment, cuddly affectionate, apartment lifestyle
+   P002     Luna     Cat    0.110166        independent calm, indoor independent, apartment indoor, peaceful indoor, calm quiet
+   P004     Coco     Cat    0.106915                            gentle senior, senior cat, coco gentle, noise gentle, cat likes
+
+==============================================================================
+TEST CASE 3 - COLD START (new pet P041 has zero ratings)
+==============================================================================
+item_id           pet_name species  similarity
+   P041 New Rescue - Maple     Cat    0.510784
+   P001               Milo     Cat    0.350465
+   P022              Freya     Cat    0.275133
+   P033              Pearl     Cat    0.272345
+   P004               Coco     Cat    0.160628
